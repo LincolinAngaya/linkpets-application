@@ -11,6 +11,7 @@ class CreateDogs < ActiveRecord::Migration[6.1]
           t.string :physical
           t.string :social_life
           t.string :personality
+          t.integer :admin_id
 
       t.timestamps
     end
