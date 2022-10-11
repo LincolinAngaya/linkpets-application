@@ -8,7 +8,7 @@ class SessionController < ApplicationController
 
 
     def destroy
-        session.delete :user_id
+        session.delete :admin_id
         head :no_content
     end
 end
