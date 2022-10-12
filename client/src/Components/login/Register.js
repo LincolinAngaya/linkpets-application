@@ -59,7 +59,7 @@ const Register = () => {
             email: email.toLowerCase(), 
             password: password
         }
-        fetch("https://linq-restaraunt.herokuapp.com/create-account", {
+        fetch("/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
