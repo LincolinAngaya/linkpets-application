@@ -5,7 +5,7 @@ class DogsController < ApplicationController
         else
           render json: { errors: [] }, status: :unauthorized
         end
-      end
+     end
     
       def create
         # byebug
@@ -29,16 +29,18 @@ class DogsController < ApplicationController
           dog.update(dog_params)
           render json: dog
       end
+    end
     
       def destroy
         dog = Dog.find_by(id: params[:id])
         dog.destroy
         head :no_content
-      endd
+      end
     
       private
     
       def dog_params
-        params.permit(:name, :breed, :image_url, :height, :weight, :life_expectancy, :family_life, :physical, :social_life, :personality)
+        params.permit(:name, :breed, :image_url, :height, :weight, :life_expectancy, :family_life, :physical, :social_life, :personality, :admin_id)
       end
+
 end
