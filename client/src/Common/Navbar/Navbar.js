@@ -26,11 +26,11 @@ const Navbar = () => {
                 About us
               </Link>
             </li> */}
-            <li>
+            {/* <li>
               <Link to='/gallery' onClick={closeMobileMenu}>
                 Gallery
               </Link>
-            </li>
+            </li> */}
             {/* <li>
               <Link to='/destinations' onClick={closeMobileMenu}>
                 Destinations
@@ -41,11 +41,11 @@ const Navbar = () => {
                 Blog
               </Link>
             </li> */}
-            <li>
+            {/* <li>
               <Link to='/testimonial' onClick={closeMobileMenu}>
                 Testimonial
               </Link>
-            </li>
+            </li> */}
             {/* <li>
               <Link to='/booking' onClick={closeMobileMenu}>
                 Booking
