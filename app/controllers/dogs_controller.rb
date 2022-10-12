@@ -22,6 +22,19 @@ class DogsController < ApplicationController
           render json: { errors: [] }, status: :unauthorized
         end
       end
+
+      def update
+        dog = Dog.find_by(id: params[:id])
+        if dog
+          dog.update(dog_params)
+          render json: dog
+      end
+    
+      def destroy
+        dog = Dog.find_by(id: params[:id])
+        dog.destroy
+        head :no_content
+      endd
     
       private
     
