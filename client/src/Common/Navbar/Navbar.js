@@ -87,7 +87,7 @@ const Navbar = () => {
       <header>
         <div className='container flex_space'>
           <div className='logo'>
-            <h1>Guinness Room Reservation System</h1>
+            <h1>Linkpets</h1>
           </div>
 
           <div className='contact flex_space '>
@@ -106,7 +106,7 @@ const Navbar = () => {
               </div>
               <div className='text'>
                 <h4>Call Us</h4>
-                <Link to='/contact'>+254705001954</Link>
+                <Link to='/contact'>+254793863208</Link>
               </div>
             </div>
             <div className='box flex_space'>
@@ -115,7 +115,7 @@ const Navbar = () => {
               </div>
               <div className='text'>
                 <h4>Mail Us</h4>
-                <Link to='/contact'>brianguinness@gmail.com</Link>
+                <Link to='/contact'>lincolinangaya5626@gmail.com</Link>
               </div>
             </div>
           </div>
