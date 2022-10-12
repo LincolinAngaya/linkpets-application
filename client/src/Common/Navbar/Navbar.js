@@ -21,26 +21,26 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to='/about' onClick={closeMobileMenu}>
                 About us
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to='/gallery' onClick={closeMobileMenu}>
                 Gallery
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to='/destinations' onClick={closeMobileMenu}>
                 Destinations
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link to='/blog' onClick={closeMobileMenu}>
                 Blog
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to='/testimonial' onClick={closeMobileMenu}>
                 Testimonial
@@ -64,15 +64,20 @@ const Navbar = () => {
                 <i class='far fa-chevron-right'></i>Sign in
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to='/register'>
                 <i class='far fa-chevron-right'></i>Register
+              </Link>
+            </li> */}
+             <li>
+             <Link to='/sign-in'>
+                <button className='primary-btn'>Adopt A Pet</button>
               </Link>
             </li>
             
             <li>
-              <Link to='/contact'>
-                <button className='primary-btn'>Request a Quote</button>
+            <Link to='/register'>
+                <button className='primary-btn'>Become A member</button>
               </Link>
             </li>
           </div>
