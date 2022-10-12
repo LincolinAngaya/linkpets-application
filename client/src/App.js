@@ -1,20 +1,18 @@
 import "./App.css"
 import Navbar from "./Common/Navbar/Navbar"
 import Home from "./Components/pages/Home"
-import About from "./Components/About/About"
 import Gallery from "./Components/gallery/Gallery"
 //import Destinations from "./Components/Destinations/Destinations"
 //import DHome from "./Components/Destinations/Home"
-import Destinations from "./Components/Destinations/Home"
+
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import SinglePage from "./SinglePage/SinglePage"
+
 
 /*-------------blog------------ */
 
 import Testimonial from "./Components/Testimonial/Testimonial"
 import Contact from "./Components/Contact/Contact"
-import Footer from "./Common/footer/Footer"
 import Login from "./Components/login/Login"
 import Register from "./Components/login/Register"
 import BookingFrom from "./Components/login/BookingForm/BookingFrom"
@@ -35,7 +33,7 @@ function App() {
           <Route path='/Register' component={Register} />
           <Route path='/booking' component={BookingFrom} />
         </Switch>
-        <Footer />
+      
       </Router>
     </>
   )
