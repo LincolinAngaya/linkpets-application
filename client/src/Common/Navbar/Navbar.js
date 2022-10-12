@@ -21,36 +21,7 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            {/* <li>
-              <Link to='/about' onClick={closeMobileMenu}>
-                About us
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link to='/gallery' onClick={closeMobileMenu}>
-                Gallery
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link to='/destinations' onClick={closeMobileMenu}>
-                Destinations
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link to='/blog' onClick={closeMobileMenu}>
-                Blog
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link to='/testimonial' onClick={closeMobileMenu}>
-                Testimonial
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link to='/booking' onClick={closeMobileMenu}>
-                Booking
-              </Link>
-            </li> */}
+        
             <li>
               <Link to='/contact' onClick={closeMobileMenu}>
                 Contact Us
@@ -64,11 +35,6 @@ const Navbar = () => {
                 <i class='far fa-chevron-right'></i>Sign in
               </Link>
             </li>
-            {/* <li>
-              <Link to='/register'>
-                <i class='far fa-chevron-right'></i>Register
-              </Link>
-            </li> */}
              <li>
              <Link to='/sign-in'>
                 <button className='primary-btn'>Adopt A Pet</button>
