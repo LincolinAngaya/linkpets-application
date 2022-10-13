@@ -1,8 +1,8 @@
 import React from "react"
-import HeadTitle from "../../Common/HeadTitle/HeadTitle"
+ import HeadTitle from "../../Common/HeadTitle/HeadTitle"
 import DogFrom from "./DogFrom"
 import { useHistory } from 'react-router-dom';
-import Navigation from '../../Components/Navigation/Navigation'
+import Navigation from "../../Common/Navigation/Navigation";
 
 const DogForm = () => {
 

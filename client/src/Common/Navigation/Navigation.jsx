@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "./Navbar.css"
+import '../Navigation/Navigation.css'
 import { Link } from "react-router-dom"
 
 const Navigation = () => {
@@ -19,13 +19,13 @@ const Navigation = () => {
          
             <li>
               <Link to='/Adopt-A-Pet' onClick={closeMobileMenu}>
-                Dogs
+                Adopt Pet
               </Link>
             </li> 
 
             <li>
-            <Link to='/dog-form'>
-                <button className='primary-btn'>dog form</button>
+            <Link to='/add-pet'>
+                 Add Pet
               </Link>
             </li> 
         

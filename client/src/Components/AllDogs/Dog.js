@@ -6,6 +6,7 @@ import React from 'react'
 import '../AllDogs/dogs.scss'
 
  import RestarauntItem from '../card/DogItem';
+import Navigation from '../../Common/Navigation/Navigation';
 
 function AllRestaraunts() {
 
@@ -52,6 +53,7 @@ function AllRestaraunts() {
 
   return (
     <>
+    <Navigation />
     <HeadTitle />
     {/* <h1 className='heading'>Adopt The Pet</h1>  */}
     <div className='restarauntlist'>

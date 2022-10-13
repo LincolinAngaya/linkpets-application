@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { useHistory } from "react-router-dom";
-import HeadTitle from "../../Common/HeadTitle/HeadTitle"
+ import HeadTitle from "../../Common/HeadTitle/HeadTitle"
 import Navbar from '../../Common/Navbar/Navbar';
 import "./design.css"
 
@@ -73,8 +73,8 @@ const Register = () => {
   
   return (
     <>
-    <Navbar />
-      <HeadTitle />
+      <Navbar />
+       <HeadTitle /> 
       <section className='forms top'>
         <div className='container'>
           <div className='sign-box'>
