@@ -10,47 +10,24 @@ import Navigation from '../../Common/Navigation/Navigation';
 
 function Dogs() {
 
-  const [isLoading,setIsLoading] = useState(true);
-  const [loadedDogs,setLoadedDogs] = useState([]);
-  const[allDogs, setAllDogs] = useState([]);
+  
+  const [dogs, setDogs] = useState([]);
   
         useEffect(() => {
-           setIsLoading(true)
-          fetch('https://booking-666fa-default-rtdb.firebaseio.com/dogs.json')
+           fetch('/dogs')
 
-          .then(response => {
-           return response.json();
-          })
-       
-          .then(data => {
-
-            const dogs = [];
-
-            for (const key in data){
-              const dog = {
-                id:key,
-                ...data[key]
-              };
-              dogs.push(dog);
-            }
-             setIsLoading(false);
-             setLoadedDogs(dogs);
-          });
+          .then(response =>  response.json())
+          .then(setDogs)
         },[]);
  
 
-   if (isLoading){
-    return <section>
-      <p>loading......</p>
-    </section>
-   }
-
-   function handleEntryDelete(id){
-    fetch(`https://booking-666fa-default-rtdb.firebaseio.com/dogs.json/${id}`, {
-        method: "DELETE"
+   const deleteDogs = async (id) => {
+    await fetch(`/dogs/${id}`, {
+      method: 'DELETE',
     })
-    const filteredDogs = allDogs?.filter((dog)=> dog?.id !== id);
-    setAllDogs(filteredDogs);
+
+    setDogs(dogs.filter((dog) => dog.id !== id ))
+  }
 }
 
   return (
@@ -60,9 +37,9 @@ function Dogs() {
     {/* <h1 className='heading'>Adopt The Pet</h1>  */}
     <div className ='restarauntlist'>
     
-     <CardItem  
-     handleDelete={handleEntryDelete}
-    dogs={loadedDogs}
+     <CardItem  onDelete={deleteDogs}
+     dog = {dogs} 
+   
       />
   
     
@@ -72,3 +49,75 @@ function Dogs() {
 }
 
 export default Dogs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { useState, useEffect } from 'react';
+// import Article from './Article';
+// import React from 'react';
+// import './Articles.css'
+// import NewArticle from './NewArticle'
+
+
+// function Articles() {
+//   const [articles, setArticles] = useState([]);
+
+//   useEffect(() => {
+//     fetch("/articles")
+//       .then((res) => res.json())
+//       .then(setArticles)
+//   }, [])
+  
+//   const deleteArticle = async (id) => {
+//     await fetch(`/articles/${id}`, {
+//       method: 'DELETE',
+//     })
+
+//     setArticles(articles.filter((article) => article.id !== id ))
+//   }
+  
+
+//   return (
+//     <div className='article_page'>
+//       <div className='left_nav'>
+//         <div className="Account_Info">
+//             <img className="Account_Image"
+//                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2fd3LvBNTzUGkRTqBX2UMvbrbzNuzShL4ll3pI5YUZg&s"
+//                 alt="example"
+//             />
+           
+//             <div className="edit-btn">
+//               <button type="submit" className="edit-btn" >Edit Account</button>
+//             </div>
+//         </div>
+//       </div>
+//       <div className='middle_sect'>
+//         <NewArticle />
+//         <Article articles={ articles } onDelete={deleteArticle} />   
+//       </div>
+//       <div className='right_sect'>
+
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default Articles
