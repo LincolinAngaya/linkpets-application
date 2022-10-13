@@ -5,19 +5,21 @@ import "../../login/design.css"
 
 const DogForm = () => {
   const history = useHistory();
-    const[membership, setMembership] = useState("");
-    const[firstname, setFirstname] = useState("");
-    const[lastname, setLastname] = useState("");
-    const[location, setLocation] = useState("");
+    const[name, setName] = useState("");
+    const[breed, setBreed] = useState("");
+    const[height, setHeight] = useState("");
+    const[weight, setWeight] = useState("");
     const[image, setImage] = useState("");
-    const[contact, setContact] = useState("");
-    const[email, setEmail] = useState("");
-    const[password, setPassword] = useState("");  
+    const[life_expectancy, setLife_Expectancy] = useState("");
+    const[family_life, setFamily_Life] = useState("");
+    const[physical, setPhysical] = useState("");
+    const[social_life, setSocial_Life] = useState("");
+    const[personality, setPersonality] = useState("");  
 
 
     function handleOnChange(event){
-      if(event.target.name === "membership"){
-            setMembership(event.target.value);
+      if(event.target.name === "name"){
+        setName(event.target.value);
         }else if(event.target.name === "firstname"){
             setFirstname(event.target.value);
         }else if (event.target.name === "lastname"){
