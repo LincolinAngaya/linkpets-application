@@ -1,0 +1,67 @@
+$mainBlack:#222;
+$mainGreen:#0000FF;
+$mainWhite:#fff;
+$mainGray:#ececec;
+.tour {
+    background: $mainGray;
+    border-radius: 0.8rem;
+    margin: 1rem 0;
+    img {
+        width: 100%;
+        border-top-left-radius: 0.8rem;
+        border-top-right-radius: 0.8rem;
+        display: block;
+    }
+}
+
+.img-container {
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    display: block;
+    top: 50%;
+    color: #0000FF;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3slinear;
+    opacity: 0;
+}
+
+.img-container:hover.close-btn {
+    opacity: 1;
+}
+
+.restaraunt-info {
+    padding: 1rem 0.5rem;
+    h3 {
+        text-transform: uppercase;
+        color: #0000FF;
+    }
+    h4 {
+        text-transform: uppercase;
+        color: black;
+        margin: 0.2rem 0 0.6rem 0;
+    }
+    .rbutton {
+        text-transform: capitalize;
+        margin: 1.5;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+    button {
+        padding: 0.5rem 0.2rem;
+        border-radius: 5px;
+        border: 1px solid black;
+        background-color: white;
+        margin: 0 0.25rem;
+        cursor: pointer;
+    }
+    .colorred {
+        color: red
+    }
+    p {
+        color: green;
+    }
+}

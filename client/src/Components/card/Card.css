@@ -1,0 +1,52 @@
+.tour {
+  background: #ececec;
+  border-radius: 0.8rem;
+  margin: 1rem 0;
+}
+.tour img {
+  width: 100%;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  display: block;
+}
+
+.img-container {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  display: block;
+  top: 50%;
+  color: #0000FF;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3slinear;
+  opacity: 0;
+}
+
+.img-container:hover.close-btn {
+  opacity: 1;
+}
+
+.restaraunt-info {
+  padding: 1rem 0.5rem;
+}
+.restaraunt-info h3 {
+  text-transform: uppercase;
+  color: #0000FF;
+}
+.restaraunt-info h4 {
+  text-transform: uppercase;
+  color: black;
+  margin: 0.2rem 0 0.6rem 0;
+}
+.restaraunt-info h6 {
+  text-transform: capitalize;
+}
+.restaraunt-info h6 span {
+  color: black;
+  margin: 0.5;
+  font-size: 1.8rem;
+  cursor: pointer;
+}/*# sourceMappingURL=Card.css.map */

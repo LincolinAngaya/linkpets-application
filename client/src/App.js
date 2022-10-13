@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 /*-------------blog------------ */
 import Dog from "./Components/AllDogs/Dog"
+import AllRestaraunts from './components/AllRestaraunt/AllRestaraunt';
 import Contact from "./Components/Contact/Contact"
 import Login from "./Components/login/Login"
 import Register from "./Components/login/Register"
@@ -24,6 +25,8 @@ function App() {
           <Route path='/' exact component={Home} />
           <Route path='/dogs' component={Dog} />
           <Route path='/contact' component={Contact} />
+          <Route  path='/dogs'  component={AllRestaraunts}>
+        
           <Route path='/sign-out' component={Login} />
           <Route path='/sign-in' component={Login} />
           <Route path='/Register' component={Register} />
