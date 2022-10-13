@@ -36,8 +36,7 @@ const Navigation = () => {
           <div className='login-area flex'>
           <li>
               <Link to='/sign-out'>
-                <i className='far fa-chevron-right'>
-                <button onClick={handleLogoutClick} className="header-btn-logout" >Logout</button>
+                <i className='far fa-chevron-right'>Sign Out
                 </i>
               </Link>
            </li>

@@ -17,7 +17,7 @@ import './pets.scss'
   
         useEffect(() => {
            setIsLoading(true)
-          fetch('https://booking-666fa-default-rtdb.firebaseio.com/dogs.json')
+          fetch('/pets')
 
           .then(response => {
            return response.json();

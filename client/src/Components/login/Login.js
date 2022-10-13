@@ -42,7 +42,7 @@ function handleOnSubmit(event){
   });
       }  
 
-}
+
   return (
     <>
      <Navbar/>

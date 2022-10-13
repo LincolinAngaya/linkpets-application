@@ -21,6 +21,11 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
+            <li>
+              <Link to='/Adopt-A-Pet' onClick={closeMobileMenu}>
+                Adopt Pet
+              </Link>
+            </li> 
         
              <li>
               <Link to='/pets' onClick={closeMobileMenu}>

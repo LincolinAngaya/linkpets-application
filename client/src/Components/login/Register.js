@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
-import { useHistory } from "react-router-dom";
  import HeadTitle from "../../Common/HeadTitle/HeadTitle"
 import Navbar from '../../Common/Navbar/Navbar';
 import "./design.css"
 
 const Register = ({ setUser }) => {
-  const history = useHistory();
+  
     // const[membership, setMembership] = useState("");
     const[firstname, setFirstname] = useState("");
     const[lastname, setLastname] = useState("");
@@ -39,7 +38,6 @@ const Register = ({ setUser }) => {
             first_name: firstname,
             last_name: lastname,
             location: location,
-            image_url: image,
             contact: contact,
             email: email.toLowerCase(), 
             password: password
