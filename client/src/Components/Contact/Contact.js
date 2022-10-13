@@ -17,7 +17,7 @@ const Contact = () => {
      }
     }
     ).then(() => {
-      history.replace('/');
+      history.replace('Adopt-A-Pet');
     });
 }
   return (
