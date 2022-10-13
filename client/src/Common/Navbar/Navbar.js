@@ -28,8 +28,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to='/contact' onClick={closeMobileMenu}>
-                Contact Us
+              <Link to='/dog-form' onClick={closeMobileMenu}>
+                Dog Form
               </Link>
             </li>
           </ul>

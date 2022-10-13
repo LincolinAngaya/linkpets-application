@@ -9,10 +9,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 /*-------------blog------------ */
 import Dog from "./Components/AllDogs/Dog"
-import Contact from "./Components/Contact/Contact"
+import DogForm from "./Components/Contact/DogForm"
 import Login from "./Components/login/Login"
 import Register from "./Components/login/Register"
-import DogForm from "./Components/login/RgistraionFrom/DogForm"
+
 /*-------------blog------------ */
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/Adopt-A-Pet' component={Dog} />
-          <Route path='//dog-form' component={Contact} />
+          <Route path='/dog-form' component={DogForm} />
           <Route path='/sign-out' component={Login} />
           <Route path='/sign-in' component={Login} />
           <Route path='/Register' component={Register} />

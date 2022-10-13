@@ -1,9 +1,9 @@
 import React from "react"
 import HeadTitle from "../../Common/HeadTitle/HeadTitle"
-import ContactFrom from "./ContactFrom"
+import DogFrom from "./DogFrom"
 import { useHistory } from 'react-router-dom';
 
-const Contact = () => {
+const DogForm = () => {
 
   const history = useHistory();
 
@@ -23,9 +23,9 @@ const Contact = () => {
   return (
     <>
       <HeadTitle />
-      <ContactFrom onAddDogs={addDogHandler}/>
+      <DogFrom onAddDogs={addDogHandler}/>
     </>
   )
 }
 
-export default Contact
+export default DogForm

@@ -2,7 +2,7 @@ import React from 'react'
 import {useRef} from 'react'
 import "./Contact.css"
 
-const ContactFrom = (props) => {
+const DogFrom = (props) => {
      const nameInputRef = useRef();
     const breedInputRef = useRef();
     const image_urlInputRef = useRef();
@@ -131,4 +131,4 @@ const ContactFrom = (props) => {
   )
 }
 
-export default ContactFrom
+export default DogFrom
