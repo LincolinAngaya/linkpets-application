@@ -1,14 +1,14 @@
 import React from 'react'
 import '../card/Card.scss'
-import ReviewCard from './ReviewCard'
+import DogCard from './DogCard'
 
 
-function RestarauntItem({restaraunts}) {
+function DogItem({restaraunts}) {
 
   return (
    <>
 
-     {restaraunts.map((restaraunt) => <ReviewCard  
+     {restaraunts.map((restaraunt) => <DogCard  
       
       key = {restaraunt.id}
       image = {restaraunt.image_url}
@@ -28,4 +28,4 @@ function RestarauntItem({restaraunts}) {
   )
 }
 
-export default RestarauntItem
+export default DogItem

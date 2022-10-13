@@ -1,14 +1,14 @@
 
 import React, { useState } from 'react'
 
-import '../card/Card.scss'
+import '../card/card.scss'
 
 
-import '../Reviews/Review.scss'
-import EnterReview from '../Reviews/reviewcomment'
+import '../card/view.scss'
 
 
-function ReviewCard({location, name, phone_no, description, image,reviews}) {
+
+function DogCard({location, name, phone_no, description, image,reviews}) {
 
      const [show, setShow] = useState(false)
 
@@ -62,7 +62,7 @@ function ReviewCard({location, name, phone_no, description, image,reviews}) {
   
     </ul>       
      </div> 
-     <EnterReview />
+  
  </main> 
  
        
@@ -73,4 +73,4 @@ function ReviewCard({location, name, phone_no, description, image,reviews}) {
   )
 }
 
-export default ReviewCard
+export default DogCard
