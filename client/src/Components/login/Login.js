@@ -1,5 +1,4 @@
 import React, { useState }from 'react'
-import { useHistory } from "react-router-dom";
 import Navbar from '../../Common/Navbar/Navbar';
 import { Link } from "react-router-dom"
 import HeadTitle from "../../Common/HeadTitle/HeadTitle"
@@ -9,7 +8,7 @@ const Login = ({ setUser }) => {
   
   const[email, setEmail] = useState("");
   const[password, setPassword] = useState("");
-  const history = useHistory();
+
 
   function handleOnChange(event){
     if (event.target.name === "email")
