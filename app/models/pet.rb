@@ -4,5 +4,5 @@ class Pet < ApplicationRecord
      validates :height, presence: true 
      validates :weight, presence: true
 
-    validates :body, social life: true, length: { minimum: 100 }
+    # validates :social_life: true, length: { maximum: 100 }
 end
