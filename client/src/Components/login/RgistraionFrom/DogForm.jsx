@@ -78,14 +78,36 @@ const DogForm = () => {
           <div className='sign-box'>
             <p>Don't have an account? Create your account, it takes less than a minute.</p>
             <form action='' onSubmit={handleCreateAccount}>
-              <input type='text' name='membership'  placeholder='Membership' value ={membership} required id="membership" onChange={handleOnChange} />
-              <input type='text' name='firs_tname'  placeholder='FirstName' value ={firstname} required id="firstname" onChange={handleOnChange} />
-              <input type='text' name='last_name' placeholder='LastName' value ={lastname} required id="lastname" onChange={handleOnChange} />
-               <input type='text' name='location' placeholder='Location' value ={location} required id="location" onChange={handleOnChange} />
-              <input type='text' name='image_url'  placeholder='Image' value ={image} required id="image_url" onChange={handleOnChange} />
-              <input type='text' name='contact' placeholder='Contact' value ={contact} required id="contact" onChange={handleOnChange} />
-              <input type='text' name='email' placeholder='Email' value ={email} required id="email" onChange={handleOnChange} />
-              <input type='password' name='password' placeholder='Password'value={password} required onChange={handleOnChange} />
+              <input type='text' name='name'  placeholder='Dog Name' value ={name} required id="name" onChange={handleOnChange} />
+              <input type='text' name='breed'  placeholder='Breed' value ={breed} required id="breed" onChange={handleOnChange} />
+              <input type='text' name='image_url' placeholder='Dog Image' value ={image} required id="image" onChange={handleOnChange} />
+               <input type='text' name='height' placeholder='Height' value ={height} required id="height" onChange={handleOnChange} />
+               <input type='text' name='weight'  placeholder='Weight' value ={weight} required id="weight" onChange={handleOnChange} />
+              <input type='text' name='life_expectancy'  placeholder='Life Expectancy' value ={life_expectancy} required id="life_expectancy" onChange={handleOnChange} />
+              <div className='input inputlast'>
+                <span>
+                  Family Life <label>*</label>
+                </span>
+                <textarea cols='30' rows='10' name='family_life'value={family_life} id="family_life" onChange={handleOnChange} ></textarea>
+              </div>
+              <div className='input inputlast'>
+                <span>
+                  Physical Life <label>*</label>
+                </span>
+                <textarea cols='30' rows='10' name='physical'value={physical} id="physical" onChange={handleOnChange} ></textarea>
+              </div>
+              <div className='input inputlast'>
+                <span>
+                  Social Life <label>*</label>
+                </span>
+                <textarea cols='30' rows='10' name='social_life'value={social_life} id="social_life" onChange={handleOnChange} ></textarea>
+              </div>
+              <div className='input inputlast'>
+                <span>
+                  Dog Personality <label>*</label>
+                </span>
+                <textarea cols='30' rows='10' name='personality'value={personality} id="personality" onChange={handleOnChange} ></textarea>
+              </div>
               <button type='submit' className='primary-btn'>
                 Create an Account
               </button>
