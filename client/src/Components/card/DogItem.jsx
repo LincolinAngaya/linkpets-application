@@ -5,7 +5,7 @@ import '../card/Card.scss'
 import '../card/view.scss'
 
 
-function DogItem({pets,onDelete}) {
+function DogItem({pets,onDelete,onEdit}) {
 
   return (
    <>
@@ -24,6 +24,7 @@ function DogItem({pets,onDelete}) {
       social_life = {dog.social_life}
       personality = {dog.personality}
       deletelink={ <button onClick={()=> onDelete(dog.id)}>Delete</button>}
+      editlink={ <button onClick={()=> onEdit(dog.id)}>Edit</button>}
      
      
       

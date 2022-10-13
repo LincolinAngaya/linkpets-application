@@ -28,6 +28,13 @@ function Dogs() {
 
     setPets(pets.filter((pet) => pet.id !== id ))
   }
+  const editPets = async (id) => {
+    await fetch(`/pets/${id}`, {
+      method: 'PATCH',
+    })
+
+    setPets(pets.filter((pet) => pet.id !== id ))
+  }
 
 
   return (
@@ -37,7 +44,7 @@ function Dogs() {
    
     <div className ='restarauntlist'>
     
-     <CardItem  onDelete={deletePets} pets = {pets} />
+     <CardItem  onDelete={deletePets}  onEdit={editPets} pets = {pets} />
   
     
     </div>
