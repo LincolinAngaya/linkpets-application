@@ -24,7 +24,7 @@ function DogItem({pets,onDelete,onEdit}) {
       social_life = {dog.social_life}
       personality = {dog.personality}
       deletelink={ <button onClick={()=> onDelete(dog.id)}>Delete</button>}
-      editlink={ <button onClick={()=> onEdit(dog.id)}>Edit</button>}
+     
      
      
       
