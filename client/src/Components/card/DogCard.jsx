@@ -6,7 +6,7 @@ import '../card/view.scss'
 
 
 
-function DogCard({name,breed,image,height,weight,life_expectancy,family_life,physical,social_life,personality}) {
+function DogCard({name,breed,image,height,weight,life_expectancy,family_life,physical,social_life,personality,deletelink}) {
 
      const [show, setShow] = useState(false)
 
@@ -41,12 +41,13 @@ function DogCard({name,breed,image,height,weight,life_expectancy,family_life,phy
 <p>{physical} </p>
 <p>{social_life} </p>
 <p>{personality} </p>
-         
+
  </main> 
        
- }     
+ }
+   {deletelink} 
     </article>
-    
+  
   )
 }
 

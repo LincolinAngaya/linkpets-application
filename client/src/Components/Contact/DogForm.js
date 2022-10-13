@@ -9,7 +9,7 @@ const DogForm = () => {
   const history = useHistory();
 
   function addDogHandler(dogDetails){
-    fetch('https://contact-us-bfcd2-default-rtdb.firebaseio.com/contact.json',
+    fetch('https://booking-666fa-default-rtdb.firebaseio.com/dogs.json',
     {
      method:'POST',
      body:JSON.stringify(dogDetails),

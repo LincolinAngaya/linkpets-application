@@ -12,10 +12,11 @@ function Dogs() {
 
   const [isLoading,setIsLoading] = useState(true);
   const [loadedDogs,setLoadedDogs] = useState([]);
+  const[allDogs, setAllDogs] = useState([]);
   
         useEffect(() => {
            setIsLoading(true)
-          fetch('/dogs')
+          fetch('https://booking-666fa-default-rtdb.firebaseio.com/dogs.json')
 
           .then(response => {
            return response.json();
@@ -36,11 +37,6 @@ function Dogs() {
              setLoadedDogs(dogs);
           });
         },[]);
-
-
-      //   function handleAddReview(newReview) {
-      //     setLoadedRestaraunts([...loadedRestaraunts, newReview]);
-      // }
  
 
    if (isLoading){
@@ -49,7 +45,13 @@ function Dogs() {
     </section>
    }
 
-
+   function handleEntryDelete(id){
+    fetch(`https://booking-666fa-default-rtdb.firebaseio.com/dogs.json/${id}`, {
+        method: "DELETE"
+    })
+    const filteredDogs = allDogs?.filter((dog)=> dog?.id !== id);
+    setAllDogs(filteredDogs);
+}
 
   return (
     <>
@@ -58,7 +60,10 @@ function Dogs() {
     {/* <h1 className='heading'>Adopt The Pet</h1>  */}
     <div className ='restarauntlist'>
     
-     <CardItem  dog={loadedDogs}/>
+     <CardItem  
+     handleDelete={handleEntryDelete}
+    dogs={loadedDogs}
+      />
   
     
     </div>

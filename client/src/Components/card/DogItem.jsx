@@ -1,9 +1,11 @@
 import React from 'react'
-import '../card/Card.scss'
+
 import DogCard from './DogCard'
+import '../card/Card.scss'
+import '../card/view.scss'
 
 
-function DogItem({dogs}) {
+function DogItem({dogs,handleDelete}) {
 
   return (
    <>
@@ -21,6 +23,8 @@ function DogItem({dogs}) {
       physical = {dog.physical}
       social_life = {dog.social_life}
       personality = {dog.personality}
+      deletelink={<button className='rbutton' onClick={()=>{handleDelete(dog.id)}}>Delete</button>}
+     
      
       
 
