@@ -12,7 +12,7 @@ import Dog from "./Components/AllDogs/Dog"
 import Contact from "./Components/Contact/Contact"
 import Login from "./Components/login/Login"
 import Register from "./Components/login/Register"
-import BookingFrom from "./Components/login/BookingForm/BookingFrom"
+import DogForm from "./Components/login/RgistraionFrom/DogForm"
 /*-------------blog------------ */
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
           <Route path='/sign-out' component={Login} />
           <Route path='/sign-in' component={Login} />
           <Route path='/Register' component={Register} />
-          <Route path='/booking' component={BookingFrom} />
+          <Route path='/dog-form' component={DogForm} />
         </Switch>
       
       </Router>

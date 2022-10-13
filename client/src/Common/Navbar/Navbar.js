@@ -56,6 +56,11 @@ const Navbar = () => {
                 <button className='primary-btn'>Become A member</button>
               </Link>
             </li>
+            {/* <li>
+            <Link to='/dog-form'>
+                <button className='primary-btn'>dog form</button>
+              </Link>
+            </li> */}
           </div>
         </div>
       </nav>

@@ -46,7 +46,7 @@ function handleOnSubmit(event){
 
           localStorage.setItem("userData", JSON.stringify(userData));
           localStorage.setItem("loginStatus", JSON.stringify(true));
-          history.replace("/booking")
+          history.replace("/dog-form")
       }  
   });
 }

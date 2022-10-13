@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import { useHistory } from "react-router-dom";
-import HeadTitle from "../../Common/HeadTitle/HeadTitle"
-import "./design.css"
+import HeadTitle from '../../../Common/HeadTitle/HeadTitle';
+import "../../login/design.css"
 
-const Register = () => {
+const DogForm = () => {
   const history = useHistory();
     const[membership, setMembership] = useState("");
     const[firstname, setFirstname] = useState("");
@@ -99,4 +99,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default DogForm
