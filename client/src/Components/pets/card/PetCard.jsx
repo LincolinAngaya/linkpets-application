@@ -5,70 +5,66 @@ import '../card/Card.scss'
 import '../card/view.scss'
 
 
+function PetCard({name,breed,image,height,weight,life_expectancy,family_life,physical,social_life,personality}) {
 
-function PetCard({location, name, phone_no, description, image,reviews}) {
-
-     const [show, setShow] = useState(false)
-
+  const [show, setShow] = useState(false)
   return (
 
     <article className='tour' >
       <div className='img-container'>
      <img 
       width="200"
-      src={image}  alt={location} />
+      src={image}  alt={name} />
       
     </div>
 
     <div className='restaraunt-info'>
       
       <h4>{name}</h4>
-      <h3>{location}</h3>
-      <h4 className='colorred'>0{phone_no}</h4>
-      <p>{description} </p>
+      <h3>{breed}</h3>
+      <h4 className='colorred'>{weight}</h4>
+      <h4 className='colorred'>{height}</h4>
+      <h3>{life_expectancy}</h3>
+     
 
        <div className='rbutton'>
 
             <button onClick={() => setShow(!show)}>{show ? "Hide Review" : "Show Review"}</button>
       </div>  
     </div>  
-{show &&  <main>
-      
-    
-      <div className="list" >
-      <ul>
-        {reviews.map((review) => 
-       
-  <li key = {review.id}>
- 
-       <span className="user">{review.user.username}</span>
-       <span className="time">{review.user.created_at.slice(0,10)}</span>
-        <p>{review.comment}</p> 
-  </li> 
-        
-       )} 
-     
-     <li>
+ {show &&   
+<main>
+  <p>hello world</p>
+<p>{family_life} </p>
+<p>{physical} </p>
+<p>{social_life} </p>
+<p>{personality} </p>
 
- <span className="user">lincolin</span>
-    <span className="time">12-09-2022</span>
-
-     <p>come</p> 
-
- </li>
-        
-  
-    </ul>       
-     </div> 
-  
  </main> 
- 
        
-}
-        
+ }
+  
     </article>
-    
+  
   )
 }
 
 export default PetCard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

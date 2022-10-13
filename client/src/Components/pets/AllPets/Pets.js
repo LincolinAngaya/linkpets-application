@@ -1,21 +1,23 @@
+
 import { useState } from 'react';
-import { useEffect } from 'react';
-import HeadTitle from '../../../Common/HeadTitle/HeadTitle';
+ import { useEffect } from 'react';
+ import HeadTitle from '../../../Common/HeadTitle/HeadTitle';
 import React from 'react'
 
 import './pets.scss'
 
- import PetItem from '../card/PetItem';
-import Navbar from '../../../Common/Navbar/Navbar';
+  import PetItem from '../card/PetItem';
+ import Navbar from '../../../Common/Navbar/Navbar';
 
-function Pets() {
+ function Pets() {
 
   const [isLoading,setIsLoading] = useState(true);
-  const [loadedRestaraunts,setLoadedRestaraunts] = useState([]);
+  const [loadedDogs,setLoadedDogs] = useState([]);
+  
   
         useEffect(() => {
            setIsLoading(true)
-          fetch('https://linq-restaraunt.herokuapp.com/restaraunts')
+          fetch('https://booking-666fa-default-rtdb.firebaseio.com/dogs.json')
 
           .then(response => {
            return response.json();
@@ -23,24 +25,19 @@ function Pets() {
        
           .then(data => {
 
-            const restaraunts = [];
+            const dogs = [];
 
             for (const key in data){
-              const restaraunt = {
+              const dog = {
                 id:key,
                 ...data[key]
               };
-              restaraunts.push(restaraunt);
+              dogs.push(dog);
             }
              setIsLoading(false);
-             setLoadedRestaraunts(restaraunts);
+             setLoadedDogs(dogs);
           });
         },[]);
-
-
-        function handleAddReview(newReview) {
-          setLoadedRestaraunts([...loadedRestaraunts, newReview]);
-      }
  
 
    if (isLoading){
@@ -50,16 +47,14 @@ function Pets() {
    }
 
 
-
   return (
     <>
     <Navbar />
     <HeadTitle />
-    
     {/* <h1 className='heading'>Adopt The Pet</h1>  */}
-    <div className='restarauntlist'>
+    <div className ='restarauntlist'>
     
-     <PetItem  restaraunts={loadedRestaraunts}/>
+    <PetItem   dogs={loadedDogs} />
   
     
     </div>
