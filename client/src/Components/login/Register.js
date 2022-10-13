@@ -5,25 +5,20 @@ import "./design.css"
 
 const Register = ({ setUser }) => {
   
-    // const[membership, setMembership] = useState("");
+    const[username, setUsername] = useState("");
     const[firstname, setFirstname] = useState("");
     const[lastname, setLastname] = useState("");
-    const[location, setLocation] = useState("");
-    // const[image, setImage] = useState("");
-    const[contact, setContact] = useState("");
     const[email, setEmail] = useState("");
     const[password, setPassword] = useState("");  
 
 
     function handleOnChange(event){
-      if(event.target.name === "firstname"){
+      if(event.target.name === "username"){
+        setUsername(event.target.value);
+    }else if(event.target.name === "firstname"){
             setFirstname(event.target.value);
         }else if (event.target.name === "lastname"){
             setLastname(event.target.value);
-        }else if (event.target.name === "location"){
-            setLocation(event.target.value);
-        }else if (event.target.name === "contact"){
-             setContact(event.target.value);
         }else if (event.target.name === "email"){
             setEmail(event.target.value);
         }
@@ -35,10 +30,9 @@ const Register = ({ setUser }) => {
     function handleCreateAccount(event){
         event.preventDefault()
         const newAdmin = {
+            username: username,
             first_name: firstname,
             last_name: lastname,
-            location: location,
-            contact: contact,
             email: email.toLowerCase(), 
             password: password
         }
@@ -65,11 +59,10 @@ const Register = ({ setUser }) => {
             <p>Do you want to be our member? Create your account, it takes less than a minute.</p>
             <form action='' onSubmit={handleCreateAccount}>
               
+              <input type='text' name='username'  placeholder='Username' value ={username} required id="username" onChange={handleOnChange} />
               <input type='text' name='firstname'  placeholder='FirstName' value ={firstname} required id="firstname" onChange={handleOnChange} />
               <input type='text' name='lastname' placeholder='LastName' value ={lastname} required id="lastname" onChange={handleOnChange} />
-               <input type='text' name='location' placeholder='Location' value ={location} required id="location" onChange={handleOnChange} />
-              <input type='text' name='contact' placeholder='Contact' value ={contact} required id="contact" onChange={handleOnChange} />
-              <input type='text' name='email' placeholder='Email' value ={email} required id="email" onChange={handleOnChange} />
+              <input type='email' name='email' placeholder='Email' value ={email} required id="email" onChange={handleOnChange} />
               <input type='password' name='password' placeholder='Password'value={password} required onChange={handleOnChange} />
               <button type='submit' className='primary-btn'>
                 Create an Account
