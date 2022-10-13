@@ -24,7 +24,7 @@ function App() {
           <Route path='/' exact component={Home} />
           <Route path='/Adopt-A-Pet' component={Dogs} />
           <Route path='/add-pet' component={DogForm} />
-          <Route path='/sign-out' component={Home} />
+          <Route path='/sign-out' component={Home}  />
           <Route path='/sign-in' component={Login} />
           <Route path='/Register' component={Register} />
         </Switch>

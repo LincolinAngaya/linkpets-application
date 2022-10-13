@@ -2,16 +2,8 @@ import React, { useState } from "react"
 import '../Navigation/Navigation.css'
 import { Link } from "react-router-dom"
 
-const Navigation = ({  setUser }) => {
+const Navigation = () => {
   const [click, setClick] = useState(false)
-
-    function handleLogoutClick() {
-      fetch("/logout", { method: "DELETE" }).then((r) => {
-        if (r.ok) {
-          setUser(null);
-        }
-      });
-    }
 
 
   const handleClick = () => setClick(!click)
