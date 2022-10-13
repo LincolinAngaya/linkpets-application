@@ -34,10 +34,14 @@ $mainGray:#ececec;
 }
 
 .button-1 {
-    border: 2px solid;
-    padding: 13px;
-    background-color: green;
+    border-radius: 12px;
+    padding: 10px 17px 10px 17px;
     color: #fff;
+    font-size: 18px;
+    background-color: red;
+    &:hover {
+        background-color: green;
+    }
 }
 
 .restaraunt-info {
