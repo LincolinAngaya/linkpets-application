@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
+import HeadTitle from "../../Common/HeadTitle/HeadTitle"
 import React from 'react'
 
 import '../AllDogs/dogs.scss'
@@ -51,9 +52,10 @@ function AllRestaraunts() {
 
   return (
     <>
-    <h1 className='heading'>Adopt The Pet</h1> 
+    <HeadTitle />
+    {/* <h1 className='heading'>Adopt The Pet</h1>  */}
     <div className='restarauntlist'>
-     
+    
      <RestarauntItem  restaraunts={loadedRestaraunts}/>
   
     

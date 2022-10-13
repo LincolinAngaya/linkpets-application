@@ -23,7 +23,7 @@ const Navbar = () => {
             </li>
         
             <li>
-              <Link to='/dogs' onClick={closeMobileMenu}>
+              <Link to='/Adopt-A-Pet' onClick={closeMobileMenu}>
                 Dogs
               </Link>
             </li>
