@@ -1,4 +1,5 @@
 
+import { Button } from 'antd'
 import React, { useState } from 'react'
 
 import '../card/Card.scss'
@@ -34,11 +35,12 @@ function PetCard({name,breed,image,height,weight,life_expectancy,family_life,phy
     </div>  
  {show &&   
 <main>
-  <p>hello world</p>
+ 
 <p>{family_life} </p>
 <p>{physical} </p>
 <p>{social_life} </p>
 <p>{personality} </p>
+<button className='button-1'>Adopt</button>
 
  </main> 
        
