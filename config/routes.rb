@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   
+  resources :pets
   resources :users
  # resources :admins
   # Routing logic: fallback requests for React Router.
