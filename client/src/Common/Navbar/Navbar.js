@@ -27,9 +27,19 @@ const Navbar = () => {
                 Contact Us
               </Link>
             </li>
+            <li>
+              <Link to='/contact' onClick={closeMobileMenu}>
+                Contact Us
+              </Link>
+            </li>
           </ul>
 
           <div className='login-area flex'>
+          <li>
+              <Link to='/sign-out'>
+                <i class='far fa-chevron-right'></i>Sign out
+              </Link>
+            </li>
             <li>
               <Link to='/sign-in'>
                 <i class='far fa-chevron-right'></i>Sign in

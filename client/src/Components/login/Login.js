@@ -28,7 +28,7 @@ function handleOnSubmit(event){
   }
 
   event.preventDefault()
-  fetch("https://linq-restaraunt.herokuapp.com/login", {
+  fetch("/login", {
       method: "POST",
       headers: {
           "Content-Type": "application/json"
@@ -37,7 +37,7 @@ function handleOnSubmit(event){
   })
   .then(response => response.json())
   .then(userData => {
-      //console.log(userData)
+      console.log(userData)
       if(Object.values(userData)[0] === "Invalid email or Password"){
           alert("Invalid email or Password!");
       }
