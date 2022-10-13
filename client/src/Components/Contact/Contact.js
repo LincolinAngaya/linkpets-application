@@ -7,11 +7,11 @@ const Contact = () => {
 
   const history = useHistory();
 
-  function addMovieHandler(contactDetails){
+  function addDogHandler(dogDetails){
     fetch('https://contact-us-bfcd2-default-rtdb.firebaseio.com/contact.json',
     {
      method:'POST',
-     body:JSON.stringify(contactDetails),
+     body:JSON.stringify(dogDetails),
      headers:{
             'Content-Type':'application/json'
      }
@@ -23,7 +23,7 @@ const Contact = () => {
   return (
     <>
       <HeadTitle />
-      <ContactFrom onAddContact={addMovieHandler}/>
+      <ContactFrom onAddDogs={addDogHandler}/>
     </>
   )
 }
