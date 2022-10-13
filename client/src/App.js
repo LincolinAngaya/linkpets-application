@@ -23,11 +23,10 @@ function App() {
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/Adopt-A-Pet' component={Dog} />
-          <Route path='/contact' component={Contact} />
+          <Route path='//dog-form' component={Contact} />
           <Route path='/sign-out' component={Login} />
           <Route path='/sign-in' component={Login} />
           <Route path='/Register' component={Register} />
-          <Route path='/dog-form' component={DogForm} />
         </Switch>
       
       </Router>
