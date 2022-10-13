@@ -23,8 +23,8 @@ const Navbar = () => {
             </li>
         
             <li>
-              <Link to='/contact' onClick={closeMobileMenu}>
-                Contact Us
+              <Link to='/dogs' onClick={closeMobileMenu}>
+                Dogs
               </Link>
             </li>
             <li>

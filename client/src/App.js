@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 
 /*-------------blog------------ */
-
+import Dog from "./Components/AllDogs/Dog"
 import Contact from "./Components/Contact/Contact"
 import Login from "./Components/login/Login"
 import Register from "./Components/login/Register"
@@ -22,7 +22,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/dogs' component={Contact} />
+          <Route path='/dogs' component={Dog} />
           <Route path='/contact' component={Contact} />
           <Route path='/sign-out' component={Login} />
           <Route path='/sign-in' component={Login} />

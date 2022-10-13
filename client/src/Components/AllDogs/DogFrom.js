@@ -1,6 +1,6 @@
 import React from 'react'
 import {useRef} from 'react'
-import "./Contact.css"
+import "./Dog.css"
 
 const ContactFrom = (props) => {
   const firstnameInputRef = useRef();
