@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import Navbar from '../../Common/Navbar/Navbar';
 import "./design.css"
 
-const Register = () => {
+const Register = ({ setUser }) => {
   const history = useHistory();
     // const[membership, setMembership] = useState("");
     const[firstname, setFirstname] = useState("");
@@ -33,18 +33,6 @@ const Register = () => {
         }  
       }
 
-      function handleCreateAccountAlert(responseData = {}){
-        if(Object.values(responseData)[0] === "Admin already Exists"){
-            alert("Admin email already exists, please Login!")
-            history.replace("/sign-in")   
-        }
-        else{
-           alert("Account Created successfully!")
-           history.replace("/sign-in")     
-        }
-    }
-
-
     function handleCreateAccount(event){
         event.preventDefault()
         const newAdmin = {
@@ -63,10 +51,12 @@ const Register = () => {
             }, 
             body: JSON.stringify(newAdmin)
         })
-        .then(response => response.json())
-        .then(responseData => handleCreateAccountAlert(responseData));
-    }
-  
+        .then((r) => {
+          if (r.ok) {
+            r.json().then((user) => setUser(user));
+          }
+        });
+      }
   return (
     <>
       <Navbar />
