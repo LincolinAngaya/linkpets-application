@@ -51,7 +51,7 @@ function AllRestaraunts() {
 
   return (
     <>
-    <h1 className='heading'>All Restaraunts</h1> 
+    <h1 className='heading'>Adopt The Pet</h1> 
     <div className='restarauntlist'>
      
      <RestarauntItem  restaraunts={loadedRestaraunts}/>

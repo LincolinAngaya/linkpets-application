@@ -11,7 +11,7 @@
       padding: 9px;
   }
   
-  @media screen and(min-width:768px) {
+  @media screen and (min-width:768px) {
       .restarauntlist {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -19,14 +19,14 @@
       }
   }
   
-  @media screen and(min-width:992px) {
+  @media screen and (min-width:992px) {
       .restarauntlist {
           width: 85vw;
           grid-template-columns: repeat(3, 1fr);
       }
   }
   
-  @media screen and(min-width:1140px) {
+  @media screen and (min-width:1140px) {
       .restarauntlist {
           grid-template-columns: repeat(3, 1fr);
       }

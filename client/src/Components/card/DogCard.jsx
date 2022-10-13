@@ -1,9 +1,7 @@
 
 import React, { useState } from 'react'
 
-import '../card/card.scss'
-
-
+import '../card/Card.scss'
 import '../card/view.scss'
 
 
