@@ -35,7 +35,7 @@ const Navigation = () => {
           <div className='login-area flex'>
           <li>
               <Link to='/sign-out'>
-                <i class='far fa-chevron-right'></i>Sign out
+                <i className='far fa-chevron-right'></i>Sign out
               </Link>
            </li>
           

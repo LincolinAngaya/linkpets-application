@@ -5,17 +5,17 @@ import React from 'react'
 
 import '../AllDogs/dogs.scss'
 
- import RestarauntItem from '../card/DogItem';
+ import CardItem from '../card/DogItem';
 import Navigation from '../../Common/Navigation/Navigation';
 
-function AllRestaraunts() {
+function Dogs() {
 
   const [isLoading,setIsLoading] = useState(true);
-  const [loadedRestaraunts,setLoadedRestaraunts] = useState([]);
+  const [loadedDogs,setLoadedDogs] = useState([]);
   
         useEffect(() => {
            setIsLoading(true)
-          fetch('https://linq-restaraunt.herokuapp.com/restaraunts')
+          fetch('/dogs')
 
           .then(response => {
            return response.json();
@@ -23,24 +23,24 @@ function AllRestaraunts() {
        
           .then(data => {
 
-            const restaraunts = [];
+            const dogs = [];
 
             for (const key in data){
-              const restaraunt = {
+              const dog = {
                 id:key,
                 ...data[key]
               };
-              restaraunts.push(restaraunt);
+              dogs.push(dog);
             }
              setIsLoading(false);
-             setLoadedRestaraunts(restaraunts);
+             setLoadedDogs(dogs);
           });
         },[]);
 
 
-        function handleAddReview(newReview) {
-          setLoadedRestaraunts([...loadedRestaraunts, newReview]);
-      }
+      //   function handleAddReview(newReview) {
+      //     setLoadedRestaraunts([...loadedRestaraunts, newReview]);
+      // }
  
 
    if (isLoading){
@@ -56,9 +56,9 @@ function AllRestaraunts() {
     <Navigation />
     <HeadTitle />
     {/* <h1 className='heading'>Adopt The Pet</h1>  */}
-    <div className='restarauntlist'>
+    <div className ='restarauntlist'>
     
-     <RestarauntItem  restaraunts={loadedRestaraunts}/>
+     <CardItem  dog={loadedDogs}/>
   
     
     </div>
@@ -66,4 +66,4 @@ function AllRestaraunts() {
   )
 }
 
-export default AllRestaraunts
+export default Dogs

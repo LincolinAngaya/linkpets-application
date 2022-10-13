@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 /*-------------blog------------ */
 import Pets from "./Components/pets/AllPets/Pets"
-import Dog from "./Components/AllDogs/Dog"
+import Dogs from "./Components/AllDogs/Dog"
 import DogForm from "./Components/Contact/DogForm"
 import Login from "./Components/login/Login"
 import Register from "./Components/login/Register"
@@ -22,7 +22,7 @@ function App() {
         <Switch>
         <Route path='/pets' exact component={Pets} />
           <Route path='/' exact component={Home} />
-          <Route path='/Adopt-A-Pet' component={Dog} />
+          <Route path='/Adopt-A-Pet' component={Dogs} />
           <Route path='/add-pet' component={DogForm} />
           <Route path='/sign-out' component={Home} />
           <Route path='/sign-in' component={Login} />
