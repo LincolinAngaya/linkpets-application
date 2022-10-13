@@ -35,18 +35,18 @@ const Navbar = () => {
           </ul>
 
           <div className='login-area flex'>
-          <li>
+          {/* <li>
               <Link to='/sign-out'>
                 <i class='far fa-chevron-right'></i>Sign out
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to='/sign-in'>
                 <i class='far fa-chevron-right'></i>Sign in
               </Link>
             </li>
              <li>
-             <Link to='/Adopt-A-Pet'>
+             <Link to='/sign-in'>
                 <button className='primary-btn'>Adopt A Pet</button>
               </Link>
             </li>

@@ -1,5 +1,6 @@
 import React, { useState }from 'react'
 import { useHistory } from "react-router-dom";
+import Navbar from '../../Common/Navbar/Navbar';
 import { Link } from "react-router-dom"
 import HeadTitle from "../../Common/HeadTitle/HeadTitle"
 import "./design.css"
@@ -46,12 +47,13 @@ function handleOnSubmit(event){
 
           localStorage.setItem("userData", JSON.stringify(userData));
           localStorage.setItem("loginStatus", JSON.stringify(true));
-          history.replace("/dog-form")
+          history.replace("/Adopt-A-Pet")
       }  
   });
 }
   return (
     <>
+     <Navbar/>
       <HeadTitle />
       <section className='forms top'>
         <div className='container'>
@@ -75,7 +77,7 @@ function handleOnSubmit(event){
                 Sign In
               </button>
               <p>
-                Don't have account? <Link to='/register'>Signup!</Link>
+                Don't have account? <Link to='/register'> <br />Become a Member!</Link>
               </p>
             </form>
           </div>

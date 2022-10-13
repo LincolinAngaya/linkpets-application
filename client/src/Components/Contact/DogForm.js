@@ -2,6 +2,7 @@ import React from "react"
 import HeadTitle from "../../Common/HeadTitle/HeadTitle"
 import DogFrom from "./DogFrom"
 import { useHistory } from 'react-router-dom';
+import Navigation from '../../Components/Navigation/Navigation'
 
 const DogForm = () => {
 
@@ -22,6 +23,7 @@ const DogForm = () => {
 }
   return (
     <>
+    <Navigation />
       <HeadTitle />
       <DogFrom onAddDogs={addDogHandler}/>
     </>

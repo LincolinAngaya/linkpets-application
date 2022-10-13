@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { useHistory } from "react-router-dom";
 import HeadTitle from "../../Common/HeadTitle/HeadTitle"
+import Navbar from '../../Common/Navbar/Navbar';
 import "./design.css"
 
 const Register = () => {
@@ -72,11 +73,12 @@ const Register = () => {
   
   return (
     <>
+    <Navbar />
       <HeadTitle />
       <section className='forms top'>
         <div className='container'>
           <div className='sign-box'>
-            <p>Don't have an account? Create your account, it takes less than a minute.</p>
+            <p>Do you want to be our member? Create your account, it takes less than a minute.</p>
             <form action='' onSubmit={handleCreateAccount}>
               <input type='text' name='membership'  placeholder='Membership' value ={membership} required id="membership" onChange={handleOnChange} />
               <input type='text' name='firs_tname'  placeholder='FirstName' value ={firstname} required id="firstname" onChange={handleOnChange} />

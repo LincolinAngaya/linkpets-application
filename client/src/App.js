@@ -1,5 +1,4 @@
 import "./App.css"
-import Navbar from "./Common/Navbar/Navbar"
 import Home from "./Components/pages/Home"
 
 
@@ -19,7 +18,6 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/Adopt-A-Pet' component={Dog} />
@@ -30,6 +28,7 @@ function App() {
         </Switch>
       
       </Router>
+      
     </>
   )
 }
