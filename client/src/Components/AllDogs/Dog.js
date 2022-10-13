@@ -11,22 +11,22 @@ import Navigation from '../../Common/Navigation/Navigation';
 function Dogs() {
 
   
-  const [dogs, setDogs] = useState([]);
+  const [pets, setPets] = useState([]);
   
         useEffect(() => {
-           fetch('/dogs')
+           fetch('/pets')
 
           .then(response =>  response.json())
-          .then(setDogs)
+          .then(setPets)
         },[]);
  
 
-   const deleteDogs = async (id) => {
-    await fetch(`/dogs/${id}`, {
+   const deletePets = async (id) => {
+    await fetch(`/pets/${id}`, {
       method: 'DELETE',
     })
 
-    setDogs(dogs.filter((dog) => dog.id !== id ))
+    setPets(pets.filter((pet) => pet.id !== id ))
   }
 
 
@@ -37,7 +37,7 @@ function Dogs() {
    
     <div className ='restarauntlist'>
     
-     <CardItem  onDelete={deleteDogs} dog = {dogs} />
+     <CardItem  onDelete={deletePets} pets = {pets} />
   
     
     </div>

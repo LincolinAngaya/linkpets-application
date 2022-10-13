@@ -5,12 +5,12 @@ import '../card/Card.scss'
 import '../card/view.scss'
 
 
-function DogItem({dogs,onDelete}) {
+function DogItem({pets,onDelete}) {
 
   return (
    <>
 
-     {dogs.map((dog) => <DogCard  
+     {pets.map((dog) => <DogCard  
       
       key = {dog.id}
       name = {dog.name}
