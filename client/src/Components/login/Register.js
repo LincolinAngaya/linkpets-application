@@ -82,7 +82,7 @@ const Register = () => {
               <input type='text' name='firs_tname'  placeholder='FirstName' value ={firstname} required id="firstname" onChange={handleOnChange} />
               <input type='text' name='last_name' placeholder='LastName' value ={lastname} required id="lastname" onChange={handleOnChange} />
                <input type='text' name='location' placeholder='Location' value ={location} required id="location" onChange={handleOnChange} />
-              <input type='text' name='image_url'  placeholder='Image' value ={image} required id="image_url" onChange={handleOnChange} />
+              {/* <input type='text' name='image_url'  placeholder='Image' value ={image} required id="image_url" onChange={handleOnChange} /> */}
               <input type='text' name='contact' placeholder='Contact' value ={contact} required id="contact" onChange={handleOnChange} />
               <input type='text' name='email' placeholder='Email' value ={email} required id="email" onChange={handleOnChange} />
               <input type='password' name='password' placeholder='Password'value={password} required onChange={handleOnChange} />

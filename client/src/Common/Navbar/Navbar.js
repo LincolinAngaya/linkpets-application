@@ -22,16 +22,16 @@ const Navbar = () => {
               </Link>
             </li>
         
-            <li>
+            {/* <li>
               <Link to='/Adopt-A-Pet' onClick={closeMobileMenu}>
                 Dogs
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link to='/dog-form' onClick={closeMobileMenu}>
                 Dog Form
               </Link>
-            </li>
+            </li> */}
           </ul>
 
           <div className='login-area flex'>
@@ -46,7 +46,7 @@ const Navbar = () => {
               </Link>
             </li>
              <li>
-             <Link to='/sign-in'>
+             <Link to='/Adopt-A-Pet'>
                 <button className='primary-btn'>Adopt A Pet</button>
               </Link>
             </li>
