@@ -55,6 +55,7 @@ function Pets() {
     <>
     <Navbar />
     <HeadTitle />
+    
     {/* <h1 className='heading'>Adopt The Pet</h1>  */}
     <div className='restarauntlist'>
     
