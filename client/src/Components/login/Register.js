@@ -65,8 +65,8 @@ const Register = ({ setUser }) => {
             <p>Do you want to be our member? Create your account, it takes less than a minute.</p>
             <form action='' onSubmit={handleCreateAccount}>
               
-              <input type='text' name='firs_tname'  placeholder='FirstName' value ={firstname} required id="firstname" onChange={handleOnChange} />
-              <input type='text' name='last_name' placeholder='LastName' value ={lastname} required id="lastname" onChange={handleOnChange} />
+              <input type='text' name='firstname'  placeholder='FirstName' value ={firstname} required id="firstname" onChange={handleOnChange} />
+              <input type='text' name='lastname' placeholder='LastName' value ={lastname} required id="lastname" onChange={handleOnChange} />
                <input type='text' name='location' placeholder='Location' value ={location} required id="location" onChange={handleOnChange} />
               <input type='text' name='contact' placeholder='Contact' value ={contact} required id="contact" onChange={handleOnChange} />
               <input type='text' name='email' placeholder='Email' value ={email} required id="email" onChange={handleOnChange} />
