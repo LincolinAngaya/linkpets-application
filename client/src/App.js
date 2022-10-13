@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 
 /*-------------blog------------ */
+import Pets from "./Components/pets/AllPets/Pets"
 import Dog from "./Components/AllDogs/Dog"
 import DogForm from "./Components/Contact/DogForm"
 import Login from "./Components/login/Login"
@@ -19,6 +20,7 @@ function App() {
     <>
       <Router>
         <Switch>
+        <Route path='/pets' exact component={Pets} />
           <Route path='/' exact component={Home} />
           <Route path='/Adopt-A-Pet' component={Dog} />
           <Route path='/add-pet' component={DogForm} />
