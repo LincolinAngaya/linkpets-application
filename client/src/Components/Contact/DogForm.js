@@ -8,11 +8,11 @@ const DogForm = () => {
 
   const history = useHistory();
 
-  function addDogHandler(dogDetails){
-    fetch('https://booking-666fa-default-rtdb.firebaseio.com/dogs.json',
+  function addPetHandler(petDetails){
+    fetch('/pets',
     {
      method:'POST',
-     body:JSON.stringify(dogDetails),
+     body:JSON.stringify(petDetails),
      headers:{
             'Content-Type':'application/json'
      }
@@ -25,7 +25,7 @@ const DogForm = () => {
     <>
     <Navigation />
       <HeadTitle />
-      <DogFrom onAddDogs={addDogHandler}/>
+      <DogFrom onAddpets={addPetHandler}/>
     </>
   )
 }

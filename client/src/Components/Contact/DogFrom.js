@@ -31,7 +31,7 @@ const DogFrom = (props) => {
        const enteredPersonality = personalityInputRef .current.value;
        
     
-       const dogDetails={
+       const petDetails={
            name:enteredName,
            breed:enteredBreed,
            image_url:enteredImage,
@@ -45,7 +45,7 @@ const DogFrom = (props) => {
         
        };
       
-       props.onAddDogs(dogDetails)
+       props.onAddpets(petDetails)
 }
  
  
@@ -81,7 +81,7 @@ const DogFrom = (props) => {
                   <span>
                     Height <label>*</label>
                   </span>
-                  <input type='email' name='email' ref={heightInputRef} required />
+                  <input type='text' name='height' ref={heightInputRef} required />
                 </div>
                 <div className='input'>
                   <span>Weight</span>
