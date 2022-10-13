@@ -2,8 +2,17 @@ import React, { useState } from "react"
 import '../Navigation/Navigation.css'
 import { Link } from "react-router-dom"
 
-const Navigation = () => {
+const Navigation = ({  setUser }) => {
   const [click, setClick] = useState(false)
+
+    function handleLogoutClick() {
+      fetch("/logout", { method: "DELETE" }).then((r) => {
+        if (r.ok) {
+          setUser(null);
+        }
+      });
+    }
+
 
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
@@ -35,7 +44,9 @@ const Navigation = () => {
           <div className='login-area flex'>
           <li>
               <Link to='/sign-out'>
-                <i className='far fa-chevron-right'></i>Sign out
+                <i className='far fa-chevron-right'>
+                <button onClick={handleLogoutClick} className="header-btn-logout" >Logout</button>
+                </i>
               </Link>
            </li>
           

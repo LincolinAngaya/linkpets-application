@@ -28,26 +28,23 @@ function Dogs() {
 
     setDogs(dogs.filter((dog) => dog.id !== id ))
   }
-}
+
 
   return (
     <>
     <Navigation />
     <HeadTitle />
-    {/* <h1 className='heading'>Adopt The Pet</h1>  */}
+   
     <div className ='restarauntlist'>
     
-     <CardItem  onDelete={deleteDogs}
-     dog = {dogs} 
-   
-      />
+     <CardItem  onDelete={deleteDogs} dog = {dogs} />
   
     
     </div>
     </>
   )
-}
 
+  }
 export default Dogs
 
 
