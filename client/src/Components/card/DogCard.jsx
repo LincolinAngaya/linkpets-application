@@ -31,7 +31,7 @@ function DogCard({name,breed,image,height,weight,life_expectancy,family_life,phy
 
        <div className='rbutton'>
 
-            <button onClick={() => setShow(!show)}>{show ? "Hide Review" : "Show Review"}</button>
+            <button onClick={() => setShow(!show)}>{show ? "Hide Pet Traits" : "Pet Traits"}</button>
       </div>  
     </div>  
  {show &&   

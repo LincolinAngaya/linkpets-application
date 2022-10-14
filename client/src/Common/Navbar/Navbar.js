@@ -24,7 +24,7 @@ const Navbar = ({ user, setUser }) => {
           {user ? (
             <>
             <Link  to='/add-pet' className="header-btn" >  Add Pet</Link>
-            <Link to='/Adopt-A-Pet' className="header-btn" > Adopt Pet</Link>
+            <Link to='/Pets -Adopted' className="header-btn" > Pets Adopted</Link>
             <button onClick={handleLogoutClick} className="header-btn-logout" >Logout</button>
             </>
                      

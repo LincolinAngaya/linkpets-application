@@ -42,14 +42,14 @@ function App() {
           <Switch>
               {/* <Route path='/' exact component={Home}  /> */}
               <Route path='/add-pet' component={DogForm}   />
-              <Route path='/Adopt-A-Pet' component={Dogs}  />
+              <Route path='/Pets Adopted' component={Dogs}  />
            </Switch>
            </>
 
           ):(
             <>
             <Switch>
-            <Route path='/pets'>
+            <Route  path='/pets'>
                       <Pets  setUser={setUser} />
                 </Route> 
                 
@@ -59,9 +59,9 @@ function App() {
                 <Route path='/Register'>
                       <Register  setUser={setUser} />
                 </Route> 
-                {/* <Route path="/">
+                 <Route  exact path="/">
                 <Home />
-            </Route> */}
+            </Route> 
                 
             </Switch>
             
