@@ -19,7 +19,7 @@ const Navbar = ({ user, setUser }) => {
 <header className="nav">
       
       <div>
-           <Link to="/" className="header-btn">Home</Link>  
+           {/* <Link to="/" className="header-btn">Home</Link>   */}
 
           {user ? (
             <>
