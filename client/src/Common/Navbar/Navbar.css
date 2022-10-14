@@ -1,64 +1,41 @@
-.navbar {
-    background: #222222;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    height: 10vh;
-    line-height: 10vh;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1px solid grey;
+    position: fixed;
+    width: 100%;
+    margin-top: 0px;
 }
 
-nav ul li {
+header a,
+header button {
+    font-size: 1rem;
     display: inline-block;
-    transition: all 0.2s ease-out;
-    margin: 0 30px 0 0;
+    margin: 0.5rem;
+    padding-left: 2.5rem;
+    text-decoration: none;
+    width: 100;
+    cursor: pointer;
 }
 
-nav ul li a {
-    color: #fff;
-    font-weight: 400;
-    font-size: 15px;
-    letter-spacing: 1px;
-    transition: all 0.2s ease-out;
-    opacity: 0.8;
+.nav {
+    background-color: rgb(53, 52, 52);
+    height: 65px;
 }
 
-nav ul li a:hover {
-    color: #31b675;
+.header-btn {
+    color: rgb(254, 254, 255);
+    font-size: 16px;
 }
 
-.nav-links-mobile {
-    display: none;
+.header-btn-logout {
+    padding-right: 55px;
+    color: red;
 }
 
-.menu-icon {
-    display: none;
-}
 
-nav i {
-    color: #fff;
-}
-
-.login-area {
-    color: white;
-}
-
-.login-area a {
-    font-weight: 300;
-    opacity: 0.8;
-    font-size: 13px;
-    color: #fff;
-}
-
-.login-area i {
-    margin: 0 5px 0 15px;
-    font-size: 13px;
-    color: #fff;
-}
-
-.login-area button {
-    margin-left: 20px;
-}
-
+/* 
 @media screen and (max-width: 768px) {
     .login-area {
         position: absolute;
@@ -107,7 +84,8 @@ nav i {
 
 /*--------header------------*/
 
-header {
+
+/* header {
     padding: 20px 0 10px 0;
     background-color: #fff;
 }
@@ -133,14 +111,19 @@ header .text {
 
 header h4 {
     line-height: 10px;
-}
+} */
 
 
 /*--------header------------*/
 
-@media screen and (max-width: 768px) {
-    /*--------header--------*/
-    header .container {
+
+/* @media screen and (max-width: 768px) { */
+
+
+/*--------header--------*/
+
+
+/* header .container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -156,6 +139,7 @@ header h4 {
         font-size: 30px;
         margin-right: 5px;
         margin-top: 10px;
-    }
-    /*--------header--------*/
-}
+    } */
+
+
+/*--------header--------*/

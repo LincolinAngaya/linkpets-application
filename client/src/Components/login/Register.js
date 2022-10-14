@@ -1,15 +1,18 @@
 import React, {useState} from 'react'
+import { useHistory } from "react-router-dom";
  import HeadTitle from "../../Common/HeadTitle/HeadTitle"
-import Navbar from '../../Common/Navbar/Navbar';
 import "./design.css"
 
-const Register = ({ setUser }) => {
-  
+const Register = () => {
+
+  const history = useHistory();
+   
     const[username, setUsername] = useState("");
     const[firstname, setFirstname] = useState("");
     const[lastname, setLastname] = useState("");
     const[email, setEmail] = useState("");
     const[password, setPassword] = useState("");  
+
 
 
     function handleOnChange(event){
@@ -27,12 +30,26 @@ const Register = ({ setUser }) => {
         }  
       }
 
+      function handleCreateAccountAlert(responseData = {}){
+        if(Object.values(responseData)[0] === "Admin already Exists"){
+            alert("Admin email already exists, please Login!")
+            history.replace('/login')   
+        }
+        else{
+           alert("Account Created successfully!")
+           history.replace('/login')   
+        }
+    }
+
+
+
     function handleCreateAccount(event){
         event.preventDefault()
+
         const newAdmin = {
             username: username,
-            first_name: firstname,
-            last_name: lastname,
+            firstname: firstname,
+            lastname: lastname,
             email: email.toLowerCase(), 
             password: password
         }
@@ -41,17 +58,13 @@ const Register = ({ setUser }) => {
             headers: {
                 "Content-Type": "application/json"
             }, 
-            body: JSON.stringify(newAdmin)
-        })
-        .then((r) => {
-          if (r.ok) {
-            r.json().then((user) => setUser(user));
-          }
-        });
+            body: JSON.stringify(newAdmin),
+        }).then(response => response.json())
+        .then(responseData => handleCreateAccountAlert(responseData));
       }
   return (
     <>
-      <Navbar />
+    
        <HeadTitle /> 
       <section className='forms top'>
         <div className='container'>

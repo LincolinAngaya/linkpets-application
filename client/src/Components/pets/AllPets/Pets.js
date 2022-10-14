@@ -7,7 +7,6 @@ import React from 'react'
 import './pets.scss'
 
   import PetItem from '../card/PetItem';
- import Navbar from '../../../Common/Navbar/Navbar';
 
  function Pets() {
 
@@ -49,7 +48,6 @@ import './pets.scss'
 
   return (
     <>
-    <Navbar />
     <HeadTitle />
     {/* <h1 className='heading'>Adopt The Pet</h1>  */}
     <div className ='restarauntlist'>

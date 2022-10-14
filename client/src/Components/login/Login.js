@@ -1,59 +1,62 @@
 import React, { useState }from 'react'
-import Navbar from '../../Common/Navbar/Navbar';
 import { Link } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 import HeadTitle from "../../Common/HeadTitle/HeadTitle"
 import "./design.css"
 
-const Login = ({ setUser }) => {
-  
+const Login = () => {
   const[username, setUsername] = useState("");
   const[password, setPassword] = useState("");
 
-
-  function handleOnChange(event){
-    if (event.target.name === "username")
-        setUsername(event.target.value);
-    else{
-        setPassword(event.target.value);
-    }
-}
+  const history = useHistory();
 
 
 
-function handleOnSubmit(event){
-
-  const loginData = {
-      username: username,
-      password: password
-  }
-
-  event.preventDefault()
-  fetch("/login", {
+  function handleSubmit(e) {
+    e.preventDefault();
+    
+    fetch("/login", {
       method: "POST",
       headers: {
-          "Content-Type": "application/json"
-      }, 
-      body: JSON.stringify(loginData)
-  })
-  .then((r) => {
-    if (r.ok) {
-      r.json().then((user) => setUser(user));
-    }
-  });
-      }  
-
-
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    }) .then(response => response.json())
+    .then(userData => {
+        //console.log(userData)
+        if(Object.values(userData)[0] === "Invalid email or Password"){
+            alert("Invalid email or Password!");
+        }
+        else{
+            alert("Login successful!");
+  
+            localStorage.setItem("userData", JSON.stringify(userData));
+            localStorage.setItem("loginStatus", JSON.stringify(true));
+            history.replace("/")
+        }  
+    });
+  }
   return (
     <>
-     <Navbar/>
+   
       <HeadTitle />
       <section className='forms top'>
         <div className='container'>
           <div className='sign-box'>
             <p>Enter your username and password below to log in to your account and use the benefits of our website.</p>
-            <form action='' onSubmit={handleOnSubmit} >
-              <input type='text' name='username' placeholder='Username' value={username} required onChange={handleOnChange}/>
-              <input type='password' name='password'  placeholder='Password' required id="password"  value={password} onChange={handleOnChange} />
+            <form action='' onSubmit={handleSubmit} >
+            <input type="text"
+                id="username"
+                autoComplete="off"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+          />
+              <input type="password"
+                id="password"
+                autoComplete="current-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)} 
+          />
 
               <div className='flex_space'>
                 <div className='flex'>

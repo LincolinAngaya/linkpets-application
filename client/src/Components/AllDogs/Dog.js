@@ -6,7 +6,7 @@ import React from 'react'
 import '../AllDogs/dogs.scss'
 
  import CardItem from '../card/DogItem';
-import Navigation from '../../Common/Navigation/Navigation';
+
 
 function Dogs() {
 
@@ -32,7 +32,7 @@ function Dogs() {
 
   return (
     <>
-    <Navigation />
+    
     <HeadTitle />
    
     <div className ='restarauntlist'>

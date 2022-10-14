@@ -1,5 +1,6 @@
 import "./App.css"
 import Home from "./Components/pages/Home"
+// import React, { useEffect, useState } from "react";
 
 
 
@@ -12,24 +13,39 @@ import Dogs from "./Components/AllDogs/Dog"
 import DogForm from "./Components/Contact/DogForm"
 import Login from "./Components/login/Login"
 import Register from "./Components/login/Register"
+import Navbar from "./Common/Navbar/Navbar"
 
 /*-------------blog------------ */
 
 function App() {
+ 
+
+  // useEffect(() => {
+  //   // auto-login
+  //   fetch("/me").then((r) => {
+  //     if (r.ok) {
+  //       r.json().then((user) => setUser(user));
+  //     }
+  //   });
+  // }, []);
+  
+
   return (
     <>
-      <Router>
+     <Router>
+        <Navbar />
         <Switch>
-        <Route path='/pets' exact component={Pets} />
-          <Route path='/' exact component={Home} />
-          <Route path='/Adopt-A-Pet' component={Dogs} />
-          <Route path='/add-pet' component={DogForm} />
-          <Route path='/sign-out' component={Home}  />
-          <Route path='/sign-in' component={Login} />
-          <Route path='/Register' component={Register} />
+          {/* <Route path='/' exact component={Home}  /> */}
+           <Route path='/Adopt-A-Pet' component={Dogs}  />
+            <Route path='/add-pet' component={DogForm}   />
+           <Route path='/sign-in' component={Login}  />
+           <Route path='/Register' component={Register} />
+            <Route path='/pets' exact component={Pets} />
+
+          
         </Switch>
-      
-      </Router>
+ 
+        </Router>
       
     </>
   )

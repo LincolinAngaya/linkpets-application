@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    
     def create 
         user = User.create(user_params)
         if user
@@ -16,12 +17,13 @@ class UsersController < ApplicationController
         else
             render json: { error: "Not authorized" }, status: :unauthorized
         end
-    end
+        
+   end
 
 
     private
     def user_params
-        
-        params.permit(:username, :first_name, :last_name, :email, :password)
+        params.permit(:username, :firstname, :lastname, :email, :password)
     end
 end
+
