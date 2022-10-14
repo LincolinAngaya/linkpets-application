@@ -1,41 +1,28 @@
 import React, { useState }from 'react'
 import { Link } from "react-router-dom"
-import { useHistory } from "react-router-dom"
 import HeadTitle from "../../Common/HeadTitle/HeadTitle"
 import "./design.css"
 
-const Login = () => {
+const Login = ({setUser}) => {
   const[username, setUsername] = useState("");
   const[password, setPassword] = useState("");
-
-  const history = useHistory();
-
-
 
   function handleSubmit(e) {
     e.preventDefault();
     
-    fetch("/login", {
+    fetch ("/login",{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ username, password }),
-    }) .then(response => response.json())
-    .then(userData => {
-        //console.log(userData)
-        if(Object.values(userData)[0] === "Invalid email or Password"){
-            alert("Invalid email or Password!");
-        }
-        else{
-            alert("Login successful!");
-  
-            localStorage.setItem("userData", JSON.stringify(userData));
-            localStorage.setItem("loginStatus", JSON.stringify(true));
-            history.replace("/")
-        }  
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
     });
   }
+
   return (
     <>
    
